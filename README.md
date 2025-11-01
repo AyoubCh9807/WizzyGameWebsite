@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wizzy Game - Official Landing Page
 
-## Getting Started
+Welcome to the official landing page for **Wizzy Game™**, an indie 3D adventure/platformer by AyoubCh. This project serves as the promotional website for the game, featuring banners, logos, and updates.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
+## 🚀 Features
+
+- Fully responsive **Next.js** landing page
+- Dynamic sections for:
+  - Game banners
+  - Logos and characters
+  - Coming soon and updates
+- Footer with:
+  - Copyright and trademark information
+  - Legal notes
+- Metadata embedded in images (Author, Copyright)
+- Easy deployment to **Vercel** with HTTPS
+
+---
+
+## 📁 Project Structure
+
+wizzy_game_website/
+├─ app/
+│ ├─ components/ # Reusable UI components
+│ │ ├─ Footer.tsx
+│ │ ├─ ComingSoon.tsx
+│ │ └─ ...
+│ └─ scripts/ # Scripts for adding metadata to images
+│ └─ copyright.py
+├─ public/ # Game assets (images, logos, banners)
+├─ .gitignore # Ignored files for Git
+├─ package.json
+├─ next.config.js
+└─ README.md
+
+---
+
+## ⚡ Usage
+
+### Install dependencies
+```
+yarn install
 # or
+npm install
+```
+Run locally
+```
+Copy code
 yarn dev
 # or
-pnpm dev
-# or
-bun dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the landing page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+yarn build
+yarn start
+# or
+npm run build
+npm start
+```
 
-## Learn More
+📝 Legal / Trademark
+Wizzy™ / Wizzy Game™ is a trademark of AyoubCh.
 
-To learn more about Next.js, take a look at the following resources:
+All assets, logos, and images are copyrighted by AyoubCh, 2025.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Metadata is embedded in PNG assets for proof of authorship.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🖼 Image Metadata Script
 
-## Deploy on Vercel
+The `scripts/copyright.py` script embeds metadata into all PNG images in the `public/` folder:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Metadata Field | Value                             |
+|----------------|-----------------------------------|
+| Author         | AyoubCh                           |
+| Copyright      | © 2025 AyoubCh. All rights reserved. |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run the script:
+
+```
+python app/scripts/copyright.py
+```
+
+📚 Technologies
+Next.js — React framework for server-rendered apps
+
+TypeScript — Type safety
+
+TailwindCSS — Styling and layout
+
+Pillow — Python library for adding image metadata
+
+Vercel — Hosting and deployment
+
+⚡ Author
+AyoubCh – indie game developer
+Website: https://wizzygame.vercel.app
+Facebook / Instagram / X: @WizzyGame
