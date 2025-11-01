@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white overflow-x-hidden;
+  }
+}
+
+.glow-button {
+  @apply relative px-6 py-3 bg-transparent border-2 border-red-500 text-red-400 font-bold rounded-lg overflow-hidden transition-all duration-300;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+.glow-button:hover {
+  @apply bg-red-900/30 text-red-300 shadow-lg;
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.8);
+}
+
+.section {
+  @apply min-h-screen flex items-center justify-center px-4 py-20;
+}
