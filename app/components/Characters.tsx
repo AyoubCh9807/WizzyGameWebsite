@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const characters = [
   {
-    name: "Astera",
+    name: "Astrea",
     img: "/astrea.png",
     description:
       "The fearless heroine of Wizzy - bold, sharp-witted, and unafraid to face darkness with a savage grin.",
